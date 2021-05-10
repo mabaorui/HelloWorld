@@ -6,14 +6,6 @@ Created on Mon Oct 26 14:16:19 2020
 """
 
 
-class_id = sys.argv[1]
-thresh = sys.argv[2]
-test_list = '/data/mabaorui/AtlasNetOwn/data/shapenetcore_ids/%s_testids.txt'%(class_id)
-#test_list = '/data1/mabaorui/AtlasNetOwn/data/famous/famous_original/testset.txt'
-OUTPUT_DIR = '/data1/mabaorui/AtlasNetOwn/%s_train_5000_0001/'%(class_id)
-#OUTPUT_DIR = '/data1/mabaorui/AtlasNetOwn/%s_test_0001_sur_val/'%(class_id)
-#thresh = '_-0.01'
-
 
 files = []
 
