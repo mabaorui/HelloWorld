@@ -2,8 +2,8 @@
 
 ## Surface Reconstruction Demo
 <p align="left">
-  <img src="img/dragon.gif" width="400" />
-  <img src="img/plane_sur.gif" width="400" /> 
+  <img src="img/dragon.gif" width="500" />
+  <img src="img/plane_sur.gif" width="500" /> 
 </p>
 
 ## Single Image Reconstruction Demo
@@ -46,9 +46,9 @@ If you experience any errors, you can simply comment out the `dmc_*` dependencie
 You should then also comment out the `dmc` imports in `im2mesh/config.py`.
 
 
-## Dataset
+## Dataset and pretrained model
 
-1. You can [download](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html) our preprocessed data.
+1. You can [download](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html) our preprocessed data and pretrained model.
 2. To make it easier for you to test the code, we have prepared exmaple data in the exmaple_data folder.
 
 
@@ -89,7 +89,7 @@ You can train a new network from scratch, run
 ```
 python NeuralPull.py --data_dir /data1/mabaorui/AtlasNetOwn/data/plane_precompute_2/ --out_dir /data1/mabaorui/AtlasNetOwn/plane_cd_sur/ --class_idx 02691156 --train
 ```
-## Script Parameter Explanation
+## Script Parameters Explanation
 
 |Parameters  |Description |
 |:---------------|:----------------------------|
