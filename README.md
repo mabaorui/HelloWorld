@@ -1,5 +1,5 @@
 # NeuralPull
-## Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces
+
 ## Surface Reconstruction Demo
 <p align="left">
   <img src="img/dragon.gif" width="400" />
@@ -11,6 +11,8 @@
   <img src="img/002.jpg" width="300" />
   <img src="img/plane_svg.gif" width="450" />
 </p>
+
+## Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces
 This repository contains the code to reproduce the results from the paper.
 [Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html).
 
@@ -52,42 +54,31 @@ You should then also comment out the `dmc` imports in `im2mesh/config.py`.
 2. To make it easier for you to test the code, we have prepared exmaple data in the exmaple_data folder.
 
 
-## Generation
-To generate meshes using a trained model, use
-```
-python generate.py CONFIG.yaml
-```
-where you replace `CONFIG.yaml` with the correct config file.
-
-The easiest way is to use a pretrained model.
-You can do this by using one of the config files
-```
-configs/img/onet_pretrained.yaml
-configs/pointcloud/onet_pretrained.yaml
-configs/voxels/onet_pretrained.yaml
-configs/unconditional/onet_cars_pretrained.yaml
-configs/unconditional/onet_airplanes_pretrained.yaml
-configs/unconditional/onet_sofas_pretrained.yaml
-configs/unconditional/onet_chairs_pretrained.yaml
-```
-which correspond to the experiments presented in the paper.
-Our script will automatically download the model checkpoints and run the generation.
-You can find the outputs in the `out/*/*/pretrained` folders.
-
-Please note that the config files  `*_pretrained.yaml` are only for generation, not for training new models: when these configs are used for training, the model will be trained from scratch, but during inference our code will still use the pretrained model.
 
 ## Evaluation
 For evaluation of the models and generation meshes using a trained model, use
+1. Surface Reconstruction
 
 ```
-python NeuralPull.py --data_dir /data1/mabaorui/AtlasNetOwn/data/plane_precompute_2/ --out_dir /data1/mabaorui/AtlasNetOwn/plane_cd_sur/ --class_idx 02691156
+python NeuralPull.py --data_dir /data1/mabaorui/AtlasNetOwn/data/plane_precompute_2/ --out_dir /data1/mabaorui/AtlasNetOwn/plane_cd_sur/ --class_idx 02691156 --dataset shapenet
+```
+
+2. Single Image Reconstruction
+
+```
+python NeuralPull_SVG.py --data_dir /data1/mabaorui/AtlasNetOwn/data/plane_precompute_2/ --out_dir /data1/mabaorui/AtlasNetOwn/plane_cd_sur/ --class_idx 02691156 --class_name plane
 ```
 
 ## Training
 You can train a new network from scratch, run
+1. Surface Reconstruction
 
 ```
-python NeuralPull.py --data_dir /data1/mabaorui/AtlasNetOwn/data/plane_precompute_2/ --out_dir /data1/mabaorui/AtlasNetOwn/plane_cd_sur/ --class_idx 02691156 --train
+python NeuralPull.py --data_dir /data1/mabaorui/AtlasNetOwn/data/plane_precompute_2/ --out_dir /data1/mabaorui/AtlasNetOwn/plane_cd_sur/ --class_idx 02691156 --train --dataset shapenet
+```
+2. Single Image Reconstruction
+```
+python NeuralPull_SVG.py --data_dir /data1/mabaorui/AtlasNetOwn/data/plane_precompute_2/ --out_dir /data1/mabaorui/AtlasNetOwn/plane_cd_sur/ --class_idx 02691156 --train --class_name plane
 ```
 ## Script Parameters Explanation
 
@@ -97,7 +88,7 @@ python NeuralPull.py --data_dir /data1/mabaorui/AtlasNetOwn/data/plane_precomput
 |data_dir           |preprocessed data.      |
 |out_dir           |to store network parameters when training or to load pretrained network parameters when testing.      |
 |class_idx          |the class to train or test when using shapenet dataset, other dataset, default.      |
-|CUDA           |Destination image of the same size and type as src.      |
-|data_dir           |Destination image of the same size and type as src.      |
+|class_name           |the class to train or test when using shapenet dataset, other dataset, default.       |
+|dataset           |shapenet,famous or ABC      |
 
 
