@@ -49,20 +49,7 @@ You should then also comment out the `dmc` imports in `im2mesh/config.py`.
 1. You can [download](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html) our preprocessed data.
 2. To make it easier for you to test the code, we have prepared exmaple data in the exmaple_data folder.
 
-<table class="params">
-    <tr><td class="paramname">***Parameters***</td><td>***Description*** </td></tr>
-    <tr><td class="paramname">src</td><td>Source 8-bit or floating-point, 1-channel or 3-channel image. </td></tr>
-    <tr><td class="paramname">dst</td><td>Destination image of the same size and type as src . </td></tr>
-    <tr><td class="paramname">d</td><td>Diameter of each pixel neighborhood that is used during filtering. If it is non-positive, it is computed from sigmaSpace. </td></tr>
-    <tr><td class="paramname">sigmaColor</td><td>Filter sigma in the color space. A larger value of the parameter means that farther colors within the pixel neighborhood (see sigmaSpace) will be mixed together, resulting in larger areas of semi-equal color. </td></tr>
-    <tr><td class="paramname">sigmaSpace</td><td>Filter sigma in the coordinate space. A larger value of the parameter means that farther pixels will influence each other as long as their colors are close enough (see sigmaColor ). When d&gt;0, it specifies the neighborhood size regardless of sigmaSpace. Otherwise, d is proportional to sigmaSpace. </td></tr>
-    <tr><td class="paramname">borderType</td><td>border mode used to extrapolate pixels outside of the image, see <a class="el" href="../../d2/de8/group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a> </td></tr>
-</table>
 
-|Parameters  |Description |
-|:---------------|:----------------------------|
-|src            |Source 8-bit or floating-point, 1-channel or 3-channel image.      |
-|dst           |Destination image of the same size and type as src.      |
 ### Generation
 To generate meshes using a trained model, use
 ```
@@ -88,40 +75,25 @@ You can find the outputs in the `out/*/*/pretrained` folders.
 Please note that the config files  `*_pretrained.yaml` are only for generation, not for training new models: when these configs are used for training, the model will be trained from scratch, but during inference our code will still use the pretrained model.
 
 ### Evaluation
-For evaluation of the models, we provide two scripts: `eval.py` and `eval_meshes.py`.
+For evaluation of the models and generation meshes using a trained model, use
 
-The main evaluation script is `eval_meshes.py`.
-You can run it using
 ```
-python eval_meshes.py CONFIG.yaml
+python NeuralPull.py --data_dir /data1/mabaorui/AtlasNetOwn/data/plane_precompute_2/ --out_dir /data1/mabaorui/AtlasNetOwn/plane_cd_sur/ --class_idx 02691156 --save_idx -1
 ```
-The script takes the meshes generated in the previous step and evaluates them using a standardized protocol.
-The output will be written to `.pkl`/`.csv` files in the corresponding generation folder which can be processed using [pandas](https://pandas.pydata.org/).
-
-For a quick evaluation, you can also run
-```
-python eval.py CONFIG.yaml
-```
-This script will run a fast method specific evaluation to obtain some basic quantities that can be easily computed without extracting the meshes.
-This evaluation will also be conducted automatically on the validation set during training.
-
-All results reported in the paper were obtained using the `eval_meshes.py` script.
 
 ### Training
-Finally, to train a new network from scratch, run
-```
-python train.py CONFIG.yaml
-```
-where you replace `CONFIG.yaml` with the name of the configuration file you want to use.
+You can train a new network from scratch, run
 
-You can monitor on <http://localhost:6006> the training process using [tensorboard](https://www.tensorflow.org/guide/summaries_and_tensorboard):
 ```
-cd OUTPUT_DIR
-tensorboard --logdir ./logs --port 6006
+python NeuralPull.py --data_dir /data1/mabaorui/AtlasNetOwn/data/plane_precompute_2/ --out_dir /data1/mabaorui/AtlasNetOwn/plane_cd_sur/ --class_idx 02691156 --train
 ```
-where you replace `OUTPUT_DIR` with the respective output directory.
+### Script Parameter Explanation
 
-For available training options, please take a look at `configs/default.yaml`.
+|Parameters  |Description |
+|:---------------|:----------------------------|
+|src            |Source 8-bit or floating-point, 1-channel or 3-channel image.      |
+|dst           |Destination image of the same size and type as src.      |
+
 
 # Notes
 * In our paper we used random crops and scaling to augment the input images. 
