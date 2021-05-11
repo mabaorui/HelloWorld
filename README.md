@@ -49,8 +49,8 @@ You should then also comment out the `dmc` imports in `im2mesh/config.py`.
 1. You can [download](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html) our preprocessed data.
 2. To make it easier for you to test the code, we have prepared exmaple data in the exmaple_data folder.
 
-<p>This filter does not work inplace. </p><dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
+    <tr><td class="paramname">Parameters</td><td>Description </td></tr>
     <tr><td class="paramname">src</td><td>Source 8-bit or floating-point, 1-channel or 3-channel image. </td></tr>
     <tr><td class="paramname">dst</td><td>Destination image of the same size and type as src . </td></tr>
     <tr><td class="paramname">d</td><td>Diameter of each pixel neighborhood that is used during filtering. If it is non-positive, it is computed from sigmaSpace. </td></tr>
