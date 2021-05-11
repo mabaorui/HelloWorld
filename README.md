@@ -10,8 +10,7 @@
 <p align="left">
   <img src="img/plane_svg.gif" width="400" />
 </p>
-This repository contains the code to reproduce the results from the paper
-[Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html).
+This repository contains the code to reproduce the results from the paper [Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html).
 
 You can find detailed usage instructions for training your own models and using pretrained models below.
 
