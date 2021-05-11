@@ -1,7 +1,7 @@
 # NeuralPull
 <p float="left">
-  <img src="img/dragon.gif" width="100" />
-  <img src="img/plane_sur.gif" width="100" /> 
+  <img src="img/dragon.gif" width="400" />
+  <img src="img/plane_sur.gif" width="400" /> 
 </p>
 
 This repository contains the code to reproduce the results from the paper
