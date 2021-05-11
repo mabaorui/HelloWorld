@@ -60,7 +60,7 @@ You should then also comment out the `dmc` imports in `im2mesh/config.py`.
 </table>
 
 |Parameters  |Description |
-|:---------------|:------------:|----------------------------:|
+|:---------------|----------------------------:|
 |src            |Source 8-bit or floating-point, 1-channel or 3-channel image.      |
 |dst           |Destination image of the same size and type as src.      |
 ### Generation
