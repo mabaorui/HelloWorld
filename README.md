@@ -1,7 +1,8 @@
 # NeuralPull
-<figure class="third">
-    <img src="img/dragon.gif" width="256"/><img src="img/plane_sur.gif" width="256"/>
-</figure>
+<p float="left">
+  <img src="img/dragon.gif" width="100" />
+  <img src="img/plane_sur.gif" width="100" /> 
+</p>
 
 This repository contains the code to reproduce the results from the paper
 [Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html).
