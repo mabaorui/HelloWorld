@@ -10,9 +10,8 @@
 <p align="left">
   <img src="img/plane_svg.gif" width="400" />
 </p>
-This repository contains the code to reproduce the results from the paper
+This repository contains the code to reproduce the results from the paper.
 [Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html).
-
 You can find detailed usage instructions for training your own models and using pretrained models below.
 
 If you find our code or paper useful, please consider citing
@@ -47,43 +46,18 @@ You should then also comment out the `dmc` imports in `im2mesh/config.py`.
 
 ## Dataset
 
-1. you can download our [preprocessed data](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html).
+1. You can [download](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html) our preprocessed data.
 2. To make it easier for you to test the code, we have prepared exmaple data in the exmaple_data folder.
 
 
-### Preprocessed data
-You can download our preprocessed data (73.4 GB) using
-
-```
-bash scripts/download_data.sh
-```
-
-This script should download and unpack the data automatically into the `data/ShapeNet` folder.
-
-### Building the dataset
-Alternatively, you can also preprocess the dataset yourself.
-To this end, you have to follow the following steps:
-* download the [ShapeNet dataset v1](https://www.shapenet.org/) and put into `data/external/ShapeNet`. 
-* download the [renderings and voxelizations](http://3d-r2n2.stanford.edu/) from Choy et al. 2016 and unpack them in `data/external/Choy2016` 
-* build our modified version of [mesh-fusion](https://github.com/davidstutz/mesh-fusion) by following the instructions in the `external/mesh-fusion` folder
-
-You are now ready to build the dataset:
-```
-cd scripts
-bash dataset_shapenet/build.sh
-``` 
-
-This command will build the dataset in `data/ShapeNet.build`.
-To install the dataset, run
-```
-bash dataset_shapenet/install.sh
-```
-
-If everything worked out, this will copy the dataset into `data/ShapeNet`.
-
-## Usage
-When you have installed all binary dependencies and obtained the preprocessed data, you are ready to run our pretrained models and train new models from scratch.
-
+<table class="params">
+    <tr><td class="paramname">src</td><td>Source 8-bit or floating-point, 1-channel or 3-channel image. </td></tr>
+    <tr><td class="paramname">dst</td><td>Destination image of the same size and type as src . </td></tr>
+    <tr><td class="paramname">d</td><td>Diameter of each pixel neighborhood that is used during filtering. If it is non-positive, it is computed from sigmaSpace. </td></tr>
+    <tr><td class="paramname">sigmaColor</td><td>Filter sigma in the color space. A larger value of the parameter means that farther colors within the pixel neighborhood (see sigmaSpace) will be mixed together, resulting in larger areas of semi-equal color. </td></tr>
+    <tr><td class="paramname">sigmaSpace</td><td>Filter sigma in the coordinate space. A larger value of the parameter means that farther pixels will influence each other as long as their colors are close enough (see sigmaColor ). When d&gt;0, it specifies the neighborhood size regardless of sigmaSpace. Otherwise, d is proportional to sigmaSpace. </td></tr>
+    <tr><td class="paramname">borderType</td><td>border mode used to extrapolate pixels outside of the image, see <a class="el" href="../../d2/de8/group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a> </td></tr>
+</table>
 ### Generation
 To generate meshes using a trained model, use
 ```
