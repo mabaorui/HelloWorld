@@ -2,8 +2,8 @@
 
 ## Surface Reconstruction Demo
 <p align="left">
-  <img src="img/dragon.gif" width="450" />
-  <img src="img/plane_sur.gif" width="450" /> 
+  <img src="img/dragon.gif" width="420" />
+  <img src="img/plane_sur.gif" width="420" /> 
 </p>
 
 ## Single Image Reconstruction Demo
