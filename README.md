@@ -8,7 +8,7 @@
 
 ## Single Image Reconstruction Demo
 <p align="left">
-  <img src="img/002.jpg" width="400" />
+  <img src="img/002.jpg" width="300" />
   <img src="img/plane_svg.gif" width="400" />
 </p>
 This repository contains the code to reproduce the results from the paper.
