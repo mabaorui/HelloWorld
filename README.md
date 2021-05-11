@@ -1,9 +1,13 @@
 # NeuralPull
+## Surface Reconstruction Demo
 <p float="left">
   <img src="img/dragon.gif" width="400" />
   <img src="img/plane_sur.gif" width="400" /> 
 </p>
-
+## Single Image Reconstruction Demo
+<p float="center">
+  <img src="img/plane_svg.gif" width="400" />
+</p>
 This repository contains the code to reproduce the results from the paper
 [Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html).
 
