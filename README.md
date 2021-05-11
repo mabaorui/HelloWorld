@@ -2,14 +2,14 @@
 
 ## Surface Reconstruction Demo
 <p align="left">
-  <img src="img/dragon.gif" width="500" />
-  <img src="img/plane_sur.gif" width="500" /> 
+  <img src="img/dragon.gif" width="450" />
+  <img src="img/plane_sur.gif" width="450" /> 
 </p>
 
 ## Single Image Reconstruction Demo
 <p align="left">
   <img src="img/002.jpg" width="300" />
-  <img src="img/plane_svg.gif" width="500" />
+  <img src="img/plane_svg.gif" width="450" />
 </p>
 This repository contains the code to reproduce the results from the paper.
 [Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html).
