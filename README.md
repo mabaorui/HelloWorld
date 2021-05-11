@@ -1,6 +1,5 @@
 # NeuralPull
-![Example 1](img/dragon.gif)
-![Example 2](img/plane_sur.gif)
+![Example 1](img/dragon.gif)![Example 2](img/plane_sur.gif)
 
 This repository contains the code to reproduce the results from the paper
 [Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html).
