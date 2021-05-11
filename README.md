@@ -44,29 +44,12 @@ To compile the dmc extension, you have to have a cuda enabled device set up.
 If you experience any errors, you can simply comment out the `dmc_*` dependencies in `setup.py`.
 You should then also comment out the `dmc` imports in `im2mesh/config.py`.
 
-## Demo
-![Example Input](img/example_input.png)
-![Example Output](img/example_output.gif)
-
-You can now test our code on the provided input images in the `demo` folder.
-To this end, simply run
-```
-python generate.py configs/demo.yaml
-```
-This script should create a folder `demo/generation` where the output meshes are stored.
-The script will copy the inputs into the `demo/generation/inputs` folder and creates the meshes in the `demo/generation/meshes` folder.
-Moreover, the script creates a `demo/generation/vis` folder where both inputs and outputs are copied together.
 
 ## Dataset
 
-To evaluate a pretrained model or train a new model from scratch, you have to obtain the dataset.
-To this end, there are two options:
+1. you can download our [preprocessed data](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html).
+2. To make it easier for you to test the code, we have prepared exmaple data in the exmaple_data folder.
 
-1. you can download our preprocessed data
-2. you can download the ShapeNet dataset and run the preprocessing pipeline yourself
-
-Take in mind that running the preprocessing pipeline yourself requires a substantial amount time and space on your hard drive.
-Unless you want to apply our method to a new dataset, we therefore recommmend to use the first option.
 
 ### Preprocessed data
 You can download our preprocessed data (73.4 GB) using
