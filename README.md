@@ -58,6 +58,11 @@ You should then also comment out the `dmc` imports in `im2mesh/config.py`.
     <tr><td class="paramname">sigmaSpace</td><td>Filter sigma in the coordinate space. A larger value of the parameter means that farther pixels will influence each other as long as their colors are close enough (see sigmaColor ). When d&gt;0, it specifies the neighborhood size regardless of sigmaSpace. Otherwise, d is proportional to sigmaSpace. </td></tr>
     <tr><td class="paramname">borderType</td><td>border mode used to extrapolate pixels outside of the image, see <a class="el" href="../../d2/de8/group__core__array.html#ga209f2f4869e304c82d07739337eae7c5">BorderTypes</a> </td></tr>
 </table>
+
+|Parameters  |Description |
+|:---------------|:------------:|----------------------------:|
+|src            |Source 8-bit or floating-point, 1-channel or 3-channel image.      |
+|dst           |Destination image of the same size and type as src.      |
 ### Generation
 To generate meshes using a trained model, use
 ```
