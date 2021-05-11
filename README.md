@@ -30,11 +30,11 @@ The simplest way to do so, is to use [anaconda](https://www.anaconda.com/).
 
 You can create an anaconda environment called `mesh_funcspace` using
 ```
-conda env create -f environment.yaml
-conda activate mesh_funcspace
+conda env create -f NeuralPull.yaml
+conda activate NeuralPull
 ```
 
-Next, compile the extension modules.
+Next, for evaluation of the models,compile the extension modules, which are provided by [Occupancy Networks](https://github.com/autonomousvision/occupancy_networks).
 You can do this via
 ```
 python setup.py build_ext --inplace
