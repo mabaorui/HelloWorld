@@ -1,6 +1,6 @@
 # NeuralPull
-<center class="half">
-    <img src="img/dragon.gif" width="200"/><img src="img/plane_sur.gif" width="256"/>
+<center class="third">
+    <img src="img/dragon.gif" width="256"/><img src="img/plane_sur.gif" width="256"/>
 </center>
 
 This repository contains the code to reproduce the results from the paper
