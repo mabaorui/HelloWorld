@@ -8,6 +8,7 @@
 
 ## Single Image Reconstruction Demo
 <p align="left">
+  <img src="img/002.jpg" width="400" />
   <img src="img/plane_svg.gif" width="400" />
 </p>
 This repository contains the code to reproduce the results from the paper.
@@ -50,7 +51,7 @@ You should then also comment out the `dmc` imports in `im2mesh/config.py`.
 2. To make it easier for you to test the code, we have prepared exmaple data in the exmaple_data folder.
 
 
-### Generation
+## Generation
 To generate meshes using a trained model, use
 ```
 python generate.py CONFIG.yaml
@@ -74,25 +75,29 @@ You can find the outputs in the `out/*/*/pretrained` folders.
 
 Please note that the config files  `*_pretrained.yaml` are only for generation, not for training new models: when these configs are used for training, the model will be trained from scratch, but during inference our code will still use the pretrained model.
 
-### Evaluation
+## Evaluation
 For evaluation of the models and generation meshes using a trained model, use
 
 ```
-python NeuralPull.py --data_dir /data1/mabaorui/AtlasNetOwn/data/plane_precompute_2/ --out_dir /data1/mabaorui/AtlasNetOwn/plane_cd_sur/ --class_idx 02691156 --save_idx -1
+python NeuralPull.py --data_dir /data1/mabaorui/AtlasNetOwn/data/plane_precompute_2/ --out_dir /data1/mabaorui/AtlasNetOwn/plane_cd_sur/ --class_idx 02691156
 ```
 
-### Training
+## Training
 You can train a new network from scratch, run
 
 ```
 python NeuralPull.py --data_dir /data1/mabaorui/AtlasNetOwn/data/plane_precompute_2/ --out_dir /data1/mabaorui/AtlasNetOwn/plane_cd_sur/ --class_idx 02691156 --train
 ```
-### Script Parameter Explanation
+## Script Parameter Explanation
 
 |Parameters  |Description |
 |:---------------|:----------------------------|
-|src            |Source 8-bit or floating-point, 1-channel or 3-channel image.      |
-|dst           |Destination image of the same size and type as src.      |
+|train            |train or test a network.      |
+|data_dir           |preprocessed data.      |
+|out_dir           |to store network parameters when training or to load pretrained network parameters when testing.      |
+|class_idx          |the class to train or test when using shapenet dataset, other dataset, default.      |
+|CUDA           |Destination image of the same size and type as src.      |
+|data_dir           |Destination image of the same size and type as src.      |
 
 
 # Notes
