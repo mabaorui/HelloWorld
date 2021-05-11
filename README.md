@@ -1,5 +1,5 @@
 # NeuralPull
-
+## Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces
 ## Surface Reconstruction Demo
 <p align="left">
   <img src="img/dragon.gif" width="400" />
@@ -101,16 +101,3 @@ python NeuralPull.py --data_dir /data1/mabaorui/AtlasNetOwn/data/plane_precomput
 |data_dir           |Destination image of the same size and type as src.      |
 
 
-# Notes
-* In our paper we used random crops and scaling to augment the input images. 
-  However, we later found that this image augmentation decreases performance on the ShapeNet test set.
-  The pretrained model that is loaded in `configs/img/onet_pretrained.yaml` was hence trained without data augmentation and has slightly better performance than the model from the paper. The updated table looks a follows:
-  ![Updated table for single view 3D reconstruction experiment](img/table_img2mesh.png)
-  For completeness, we also provide the trained weights for the model which was used in the paper in  `configs/img/onet_legacy_pretrained.yaml`.
-* Note that training and evaluation of both our model and the baselines is performed with respect to the *watertight models*, but that normalization into the unit cube is performed with respect to the *non-watertight meshes* (to be consistent with the voxelizations from Choy et al.). As a result, the bounding box of the sampled point cloud is usually slightly bigger than the unit cube and may differ a little bit from a point cloud that was sampled from the original ShapeNet mesh.
-
-# Futher Information
-Please also check out the following concurrent papers that have proposed similar ideas:
-* [Park et al. - DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation (2019)](https://arxiv.org/abs/1901.05103)
-* [Chen et al. - Learning Implicit Fields for Generative Shape Modeling (2019)](https://arxiv.org/abs/1812.02822)
-* [Michalkiewicz et al. - Deep Level Sets: Implicit Surface Representations for 3D Shape Inference (2019)](https://arxiv.org/abs/1901.06802)
