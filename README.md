@@ -16,19 +16,21 @@ If you find our code or paper useful, please consider citing
 
 ## Surface Reconstruction Demo
 <p align="center">
-  <img src="img/dragon.gif" width="600" />
+  <img src="img/dragon.gif" width="750" />
 </p>
 
-<p align="left">
-  <img src="img/plane_sur.gif" width="600" />
+<p align="center">
+  <img src="img/plane_sur.gif" width="750" />
 </p>
 
 ## Single Image Reconstruction Demo
-<p align="left">
-  <img src="img/002.jpg" width="300" />
-  <img src="img/plane_svg.gif" width="450" />
+<p align="center">
+  <img src="img/002.jpg" width="400" />
 </p>
 
+<p align="center">
+  <img src="img/plane_svg.gif" width="750" />
+</p>
 
 ## Installation
 First you have to make sure that you have all dependencies in place.
