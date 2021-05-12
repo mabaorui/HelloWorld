@@ -15,21 +15,21 @@ If you find our code or paper useful, please consider citing
     }
 
 ## Surface Reconstruction Demo
-<p align="center">
-  <img src="img/dragon.gif" width="750" />
+<p align="left">
+  <img src="img/dragon.gif" width="780" />
 </p>
 
-<p align="center">
-  <img src="img/plane_sur.gif" width="750" />
+<p align="left">
+  <img src="img/plane_sur.gif" width="780" />
 </p>
 
 ## Single Image Reconstruction Demo
-<p align="center">
-  <img src="img/002.jpg" width="400" />
+<p align="left">
+  <img src="img/002.jpg" width="380" />
 </p>
 
-<p align="center">
-  <img src="img/plane_svg.gif" width="750" />
+<p align="left">
+  <img src="img/plane_svg.gif" width="780" />
 </p>
 
 ## Installation
