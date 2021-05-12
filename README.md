@@ -16,8 +16,11 @@ If you find our code or paper useful, please consider citing
 
 ## Surface Reconstruction Demo
 <p align="left">
-  <img src="img/dragon.gif" width="400" />
-  <img src="img/plane_sur.gif" width="400" /> 
+  <img src="img/dragon.gif" width="600" />
+</p>
+
+<p align="left">
+  <img src="img/plane_sur.gif" width="600" />
 </p>
 
 ## Single Image Reconstruction Demo
