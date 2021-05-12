@@ -15,7 +15,7 @@ If you find our code or paper useful, please consider citing
     }
 
 ## Surface Reconstruction Demo
-<p align="left">
+<p align="center">
   <img src="img/dragon.gif" width="600" />
 </p>
 
