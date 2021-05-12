@@ -1,4 +1,18 @@
-# NeuralPull
+# Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces
+
+This repository contains the code to reproduce the results from the paper.
+[Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces](https://arxiv.org/abs/2011.13495).
+
+You can find detailed usage instructions for training your own models and using pretrained models below.
+
+If you find our code or paper useful, please consider citing
+
+    @inproceedings{NeuralPull,
+        title = {Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces},
+        author = {Baorui, Ma and Zhizhong, Han and Yu-shen, Liu and Matthias, Zwicker},
+        booktitle = {International Conference on Machine Learning (ICML)},
+        year = {2021}
+    }
 
 ## Surface Reconstruction Demo
 <p align="left">
@@ -12,20 +26,6 @@
   <img src="img/plane_svg.gif" width="450" />
 </p>
 
-## Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces
-This repository contains the code to reproduce the results from the paper.
-[Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces](http://cgcad.thss.tsinghua.edu.cn/liuyushen/index.html).
-
-You can find detailed usage instructions for training your own models and using pretrained models below.
-
-If you find our code or paper useful, please consider citing
-
-    @inproceedings{NeuralPull,
-        title = {Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces},
-        author = {Baorui, Ma and Zhizhong, Han and Yu-shen, Liu and Matthias, Zwicker},
-        booktitle = {International Conference on Machine Learning (ICML)},
-        year = {2021}
-    }
 
 ## Installation
 First you have to make sure that you have all dependencies in place.
